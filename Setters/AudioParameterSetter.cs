@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace SoArchitecture
 {
     /// <summary>
     /// Takes a FloatVariable and sends a curve filtered version of its value 

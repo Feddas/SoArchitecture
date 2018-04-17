@@ -2,13 +2,14 @@
 // Unite 2017 - Game Architecture with Scriptable Objects
 // 
 // Author: Ryan Hipple
-// Date:   10/04/17
+// Date:   10/04/17 https://youtu.be/raQ3iHhE_Kk
+// Modified by: Feddas
 // ----------------------------------------------------------------------------
 
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace RoboRyanTron.Unite2017.Events
+namespace SoArchitecture
 {
     public class GameEventListener : MonoBehaviour
     {

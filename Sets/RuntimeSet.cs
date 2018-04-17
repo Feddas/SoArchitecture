@@ -8,7 +8,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Sets
+namespace SoArchitecture
 {
     public abstract class RuntimeSet<T> : ScriptableObject
     {

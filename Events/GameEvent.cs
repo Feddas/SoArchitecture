@@ -2,15 +2,16 @@
 // Unite 2017 - Game Architecture with Scriptable Objects
 // 
 // Author: Ryan Hipple
-// Date:   10/04/17
+// Date:   10/04/17 https://youtu.be/raQ3iHhE_Kk
+// Modified by: Feddas
 // ----------------------------------------------------------------------------
 
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Events
+namespace SoArchitecture
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(fileName = "GameEvent", menuName = "SoArchitecture/GameEvent")]
     public class GameEvent : ScriptableObject
     {
         /// <summary>

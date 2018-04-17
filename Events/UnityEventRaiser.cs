@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace SoArchitecture
 {
     public class UnityEventRaiser : MonoBehaviour
     {

@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace SoArchitecture
 {
     /// <summary>
     /// Takes a FloatVariable and sends its value to an Animator parameter 

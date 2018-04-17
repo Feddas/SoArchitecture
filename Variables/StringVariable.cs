@@ -2,23 +2,17 @@
 // Unite 2017 - Game Architecture with Scriptable Objects
 // 
 // Author: Ryan Hipple
-// Date:   10/04/17
+// Date:   10/04/17 https://youtu.be/raQ3iHhE_Kk
+// Modified by: Feddas
 // ----------------------------------------------------------------------------
 
+using System;
 using UnityEngine;
 
-namespace RoboRyanTron.Unite2017.Variables
+namespace SoArchitecture
 {
-    [CreateAssetMenu]
-    public class StringVariable : ScriptableObject
+    [CreateAssetMenu(fileName = "StringVariable", menuName = "SoArchitecture/StringVariable")]
+    public class StringVariable : SoVariableBase<string>
     {
-        [SerializeField]
-        private string value = "";
-
-        public string Value
-        {
-            get { return value; }
-            set { this.value = value; }
-        }
     }
 }
