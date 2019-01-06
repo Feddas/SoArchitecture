@@ -1,4 +1,4 @@
-﻿// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 // Unite 2017 - Game Architecture with Scriptable Objects
 // 
 // Author: Ryan Hipple
@@ -12,7 +12,7 @@ using UnityEngine;
 namespace SoArchitecture
 {
     [CustomEditor(typeof(GameEvent))]
-    public class EventEditor : Editor
+    public class EditorSoEvent : Editor
     {
         public override void OnInspectorGUI()
         {
@@ -27,21 +27,21 @@ namespace SoArchitecture
     }
 
     [CustomEditor(typeof(GameEventBool))]
-    public class EventBoolEditor : EventPayloadEditor<bool, GameEventBool>
+    public class EditorSoEventBool : EditorSoEventPayload<bool, GameEventBool>
     {
     }
 
     [CustomEditor(typeof(GameEventFloat))]
-    public class EventFloatEditor : EventPayloadEditor<float, GameEventFloat>
+    public class EditorSoEventFloat : EditorSoEventPayload<float, GameEventFloat>
     {
     }
 
     [CustomEditor(typeof(GameEventInt))]
-    public class EventIntEditor : EventPayloadEditor<int, GameEventInt>
+    public class EditorSoEventInt : EditorSoEventPayload<int, GameEventInt>
     {
     }
 
-    public class EventPayloadEditor<TPayload, TGameEvent> : Editor
+    public class EditorSoEventPayload<TPayload, TGameEvent> : Editor
         where TGameEvent : class, IGameEvent<TPayload>
     {
         public override void OnInspectorGUI()

@@ -1,0 +1,11 @@
+# The purpose of .editorconfig files are explained on https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options
+
+# top-most EditorConfig file
+root = false
+
+# Phab forced formatting is UTF-8/ASCII Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8

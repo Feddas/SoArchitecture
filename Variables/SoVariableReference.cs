@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 /// <summary>
 /// Scriptable Objects fork https://github.com/Feddas/Unite2017SoArchitecture
@@ -54,7 +54,9 @@ namespace SoArchitecture
         {
             get
             {
-                return UseConstant ? startingConstant : Variable.StartingValue;
+                return UseConstant || Variable == null
+                    ? startingConstant
+                    : Variable.StartingValue;
             }
         }
 
@@ -92,6 +94,11 @@ namespace SoArchitecture
                 }
                 else
                 {
+                    if (Variable == null)
+                    {
+                        throw new Exception("SoVariable has not been set. If you don't want to use one, click the dropdown and set 'Use Constant'");
+                    }
+
                     Variable.Value = value;
                 }
             }

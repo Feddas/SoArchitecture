@@ -1,0 +1,13 @@
+{
+    "packageId": "",
+    "version": "0.0.1",
+    "resolvedPath": "",
+    "name": "com.feddas.soarchitecture",
+    "displayName": "ScriptableObject Architecture",
+    "category": "",
+    "description": "ScriptableObjects used for variables and events",
+    "unity": "2018.2.0f2",
+    "keywords": [
+        "architecture"
+    ]
+}

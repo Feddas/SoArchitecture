@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -11,7 +11,7 @@ namespace SoArchitecture
     [CustomPropertyDrawer(typeof(FloatReference))]
     [CustomPropertyDrawer(typeof(IntReference))]
     [CustomPropertyDrawer(typeof(StringReference))]
-    public class SoReferenceDrawer : PropertyDrawer
+    public class DrawerSoReference : PropertyDrawer
     {
         /// <summary>
         /// Options to display in the popup to select constant or variable.

@@ -1,0 +1,12 @@
+{
+    "name": "EditorSoArchitecture",
+    "references": [
+        "SoArchitecture"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
