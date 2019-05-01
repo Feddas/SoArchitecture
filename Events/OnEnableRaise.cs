@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SoArchitecture
+namespace OnEnableRaise
 {
     public class UnityEventRaiser : MonoBehaviour
     {
