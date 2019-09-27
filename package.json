@@ -2,11 +2,13 @@
     "packageId": "",
     "version": "0.0.2",
     "resolvedPath": "",
-    "name": "com.feddas.soarchitecture",
+    "name": "@feddas/com.feddas.soarchitecture",
     "displayName": "ScriptableObject Architecture",
     "category": "",
     "description": "ScriptableObjects used for variables and events",
     "unity": "2018.2.0f2",
+    "publishConfig": { "registry": "https://npm.pkg.github.com" },
+    "repository": "git://github.com/feddas/soarchitecture.git",
     "keywords": [
         "architecture"
     ]
