@@ -6,6 +6,29 @@ ScriptableObjects used for variables and events
 
 These steps require Unity 2018.1.x or greater.
 
+### github reference
+
+A github reference allows a project to always use the latest version of this package. To reference the package, modify your projects \Packages\manifest.json file by changing
+
+```
+{
+  "dependencies": {
+    "com.unity.collab-proxy": "1.2.16",
+```
+
+to add a dependency on the SoArchitecture github repository
+
+```
+{
+  "dependencies": {
+    "com.feddas.soarchitecture": "https://github.com/Feddas/SoArchitecture.git",
+    "com.unity.collab-proxy": "1.2.16",
+```
+
+If you run into [authentication issues, try some of the steps on this forum thread](https://forum.unity.com/threads/re-rooting-git-repository-for-package-manager.631477/).
+
+### Local copy
+
 1. Download a release SoArchitecture0.0.x.zip from https://github.com/Feddas/SoArchitecture/releases
 
 2. Unzip SoArchitecture0.0.x.zip into your projects Packages folder while Unity is closed. If Unity is open during the file transfer, Unity needs to be restarted to recognize the package.
@@ -23,13 +46,13 @@ ProjectFolder <- This should match the name of your Unity project
 
 # Usage
 
-1. To learn the basics watch https://www.youtube.com/watch?v=raQ3iHhE_Kk
+To learn the basics watch https://www.youtube.com/watch?v=raQ3iHhE_Kk
 
 ### Payload events
 
 Payload events are events that carry a value when the event is raised. Any type can be supported by inheriting GameEventPayload<,,>. Types already included are bool, int, and float.
 
-Here's an example binding a float to a slider
+Here's an example binding a float event to a slider
 
 1. Create a GameEventFloat - This event will be raised with a payload of the sliders current value whenever the slider is modified.
     1. Right click in project window
@@ -48,6 +71,7 @@ Here's an example binding a float to a slider
         1. Drag "MySliderEvent" into the `Event` field.
         2. Inside Response, click the '+' button and add this text object
         3. Change the Response function to TextStringFormat => UpdateText()
+5. Press the play button. As you move the slider the float event will be raised. As the event is raised, the text will be updated with the sliders current value.
 
 # Inspiration
 
