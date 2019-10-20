@@ -57,7 +57,7 @@ namespace SoArchitecture
 
         public void RegisterListener(TListener listener)
         {
-            if (!eventListeners.Contains(listener))
+            if (false == eventListeners.Contains(listener))
                 eventListeners.Add(listener);
         }
 
@@ -65,6 +65,11 @@ namespace SoArchitecture
         {
             if (eventListeners.Contains(listener))
                 eventListeners.Remove(listener);
+        }
+
+        public override string ToString()
+        {
+            return LastPayload.ToString();
         }
     }
 }

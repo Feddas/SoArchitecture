@@ -57,5 +57,10 @@ namespace SoArchitecture
         {
             Value = value.Value;
         }
+
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
     }
 }

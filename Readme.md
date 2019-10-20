@@ -2,16 +2,7 @@
 
 ScriptableObjects used for variables and events
 
-# Inspiration
-
-Ryan Hippies' Unite Austin 2017 talk
-* [The video for the talk is posted on Unity's YouTube page.](https://www.youtube.com/watch?v=raQ3iHhE_Kk)
-* [Here is a blog post he did about the talk](http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html)
-* [The slides are on slideshare.](https://www.slideshare.net/RyanHipple/game-architecture-with-scriptable-objects)
-
-# Setup
-
-### Installation
+# Installation
 
 These steps require Unity 2018.1.x or greater.
 
@@ -29,3 +20,38 @@ ProjectFolder <- This should match the name of your Unity project
 3. Start Unity
 
 [Official package manager info](https://blogs.unity3d.com/2018/05/09/unity-packages-life-cycle/).
+
+# Usage
+
+1. To learn the basics watch https://www.youtube.com/watch?v=raQ3iHhE_Kk
+
+### Payload events
+
+Payload events are events that carry a value when the event is raised. Any type can be supported by inheriting GameEventPayload<,,>. Types already included are bool, int, and float.
+
+Here's an example binding a float to a slider
+
+1. Create a GameEventFloat - This event will be raised with a payload of the sliders current value whenever the slider is modified.
+    1. Right click in project window
+    2. Create => SoArchitecture => GameEventFloat
+    3. Name the new event "MySliderEvent"
+2. Create a new scene
+3. Add a slider by right clicking in hierarchy UI => Slider
+    1. Inside OnValueChanged, click the '+' button and add 'MySliderEvent' as the source object.
+    2. Change the OnValueChanged function to GameEventFloat => Raise()   Be sure to select the dynamic raise at the top so the event will be fed the value selected on the slider.
+4. Add a text overlay to the slider by right clicking the slider in the hierarchy and selecting UI => Text. This will be a Text UI object as a child of the slider.
+    1. Add a TextStringFormat component to the text.
+        1. Drag this text object into the "Output Text" field.
+        1. Drag "MySliderEvent" into the `Variables To Format` field.
+        2. Change the "Format" field to "You picked {0}".
+    2. Add a "GameEventListenerFloat" component to the text.
+        1. Drag "MySliderEvent" into the `Event` field.
+        2. Inside Response, click the '+' button and add this text object
+        3. Change the Response function to TextStringFormat => UpdateText()
+
+# Inspiration
+
+Ryan Hippies' Unite Austin 2017 talk
+* [The video for the talk is posted on Unity's YouTube page.](https://www.youtube.com/watch?v=raQ3iHhE_Kk)
+* [Here is a blog post he did about the talk](http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html)
+* [The slides are on slideshare.](https://www.slideshare.net/RyanHipple/game-architecture-with-scriptable-objects)

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// Scriptable Objects fork https://github.com/Feddas/Unite2017SoArchitecture
+/// Scriptable Objects fork https://github.com/Feddas/SoArchitecture
 /// Author: Shawn Featherly in 2018
 /// </summary>
 namespace SoArchitecture

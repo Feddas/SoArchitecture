@@ -28,7 +28,7 @@ namespace SoArchitecture
 
         public void RegisterListener(GameEventListener listener)
         {
-            if (!eventListeners.Contains(listener))
+            if (false == eventListeners.Contains(listener))
                 eventListeners.Add(listener);
         }
 

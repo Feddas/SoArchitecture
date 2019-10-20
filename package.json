@@ -1,14 +1,14 @@
 {
-    "packageId": "",
-    "version": "0.0.2",
-    "resolvedPath": "",
-    "name": "@feddas/com.feddas.soarchitecture",
+    "name": "com.feddas.soarchitecture",
     "displayName": "ScriptableObject Architecture",
-    "category": "",
-    "description": "ScriptableObjects used for variables and events",
+    "version": "0.0.2",
     "unity": "2018.2.0f2",
-    "publishConfig": { "registry": "https://npm.pkg.github.com" },
+    "description": "ScriptableObjects used for variables and events",
+    "author": "Feddas <not@given.com> (https://shawn.featherly.net)",
+    "homepage": "https://github.com/feddas/SoArchitecture",
     "repository": "git://github.com/feddas/soarchitecture.git",
+    "publishConfig": { "registry": "https://npm.pkg.github.com" },
+    "category": "",
     "keywords": [
         "architecture"
     ]

@@ -8,9 +8,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace OnEnableRaise
+namespace SoArchitecture
 {
-    public class UnityEventRaiser : MonoBehaviour
+    public class OnEnableRaise : MonoBehaviour
     {
         public UnityEvent OnEnableEvent;
 
