@@ -20,6 +20,9 @@ namespace SoArchitecture
         private readonly List<GameEventListener> eventListeners = 
             new List<GameEventListener>();
 
+        [TextArea]
+        public string DeveloperDescription = "";
+
         public void Raise()
         {
             for(int i = eventListeners.Count -1; i >= 0; i--)

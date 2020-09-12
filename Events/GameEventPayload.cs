@@ -31,6 +31,9 @@ namespace SoArchitecture
         private readonly List<TListener> eventListeners =
             new List<TListener>();
 
+        [TextArea]
+        public string DeveloperDescription = "";
+
         /// <summary> Stores the last payload used when the event was raised </summary>
         public TPayload LastPayload { get; private set; }
         public TBind BindTo;
