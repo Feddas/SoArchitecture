@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// Scriptable Objects fork https://github.com/Feddas/Unite2017SoArchitecture
+/// Scriptable Objects fork https://github.com/Feddas/SoArchitecture
 /// Author: Shawn Featherly in 2018
 /// </summary>
 namespace SoArchitecture
@@ -39,7 +39,7 @@ namespace SoArchitecture
             Event.UnregisterListener(this);
         }
 
-        public void OnEventRaised(bool payload)
+        public virtual void OnEventRaised(bool payload)
         {
             Response.Invoke(payload);
         }

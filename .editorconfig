@@ -7,7 +7,7 @@ indent_size = 4
 
 # Phab forced formatting is UTF-8/ASCII Unix-style newlines with a newline ending every file
 [*]
-end_of_line = lf
+end_of_line = crlf
 trim_trailing_whitespace = true
 insert_final_newline = true
 charset = utf-8

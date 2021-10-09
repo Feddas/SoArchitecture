@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Scriptable Objects fork https://github.com/Feddas/Unite2017SoArchitecture
+/// Scriptable Objects fork https://github.com/Feddas/SoArchitecture
 /// Author: Shawn Featherly in 2018
 /// </summary>
 namespace SoArchitecture
@@ -39,6 +39,14 @@ namespace SoArchitecture
         public TBind BindTo;
         public virtual void Raise(TPayload payload)
         {
+            SetPayload(payload);
+            for (int i = eventListeners.Count - 1; i >= 0; i--)
+                eventListeners[i].OnEventRaised(payload);
+        }
+
+        /// <summary> Sets value of LastPayload without raising an event. Typical usage would be to initalize an event's payload. </summary>
+        public void SetPayload(TPayload payload)
+        {
             if (BindTo != null)
             {
                 // Update bound variable
@@ -54,8 +62,6 @@ namespace SoArchitecture
             }
 
             LastPayload = payload;
-            for (int i = eventListeners.Count - 1; i >= 0; i--)
-                eventListeners[i].OnEventRaised(payload);
         }
 
         public void RegisterListener(TListener listener)

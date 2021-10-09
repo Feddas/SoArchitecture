@@ -1,7 +1,7 @@
 {
     "name": "com.feddas.soarchitecture",
     "displayName": "ScriptableObject Architecture",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "unity": "2018.2",
     "description": "ScriptableObjects used for variables and events",
     "author": "Feddas <not@given.com> (https://shawn.featherly.net)",

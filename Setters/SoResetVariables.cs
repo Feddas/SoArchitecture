@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
 /// <summary>
-/// Scriptable Objects fork https://github.com/Feddas/Unite2017SoArchitecture
+/// Scriptable Objects fork https://github.com/Feddas/SoArchitecture
 /// Author: Shawn Featherly in 2018
 /// </summary>
 namespace SoArchitecture

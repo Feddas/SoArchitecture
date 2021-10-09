@@ -29,6 +29,11 @@ namespace SoArchitecture
     [CustomEditor(typeof(GameEventBool))]
     public class EditorSoEventBool : EditorSoEventPayload<bool, GameEventBool>
     {
+        protected override void customUi(GameEventBool e)
+        {
+            if (GUILayout.Button("Toggle & Raise"))
+                e.Toggle();
+        }
     }
 
     [CustomEditor(typeof(GameEventFloat))]
@@ -39,6 +44,13 @@ namespace SoArchitecture
     [CustomEditor(typeof(GameEventInt))]
     public class EditorSoEventInt : EditorSoEventPayload<int, GameEventInt>
     {
+        protected override void customUi(GameEventInt e)
+        {
+            if (GUILayout.Button("Increment & Raise"))
+                e.Increment();
+            if (GUILayout.Button("Decrement & Raise"))
+                e.Decrement();
+        }
     }
 
     public class EditorSoEventPayload<TPayload, TGameEvent> : Editor
@@ -54,7 +66,12 @@ namespace SoArchitecture
             if (GUILayout.Button("Raise"))
                 e.Raise(e.LastPayload);
 
+            customUi(e);
+
             GUILayout.Label("LastPayload: " + e.LastPayload.ToString());
         }
+
+        /// <summary> Optionaly add custom Editor Ui. such as type specific buttons </summary>
+        protected virtual void customUi(TGameEvent e) { }
     }
 }
