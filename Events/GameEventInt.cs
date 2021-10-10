@@ -9,8 +9,17 @@ using UnityEngine;
 namespace SoArchitecture
 {
     [CreateAssetMenu(fileName = "GameEventInt", menuName = "SoArchitecture/GameEventInt")]
-    public class GameEventInt : GameEventPayload<int, IGameEventListener<int>, SoArchitecture.IntVariable>
+    public class GameEventInt : GameEventPayload<int, IGameEventListener<int>, IntVariable>
     {
+        public override void LateAwake()
+        {
+            // Ensure base.LateAwake can leverage PlayerPrefs
+            playerPrefGet = () => PlayerPrefs.GetInt(playPrefsKey, PlayerPrefDefault);
+            playerPrefSet = (payload) => PlayerPrefs.SetInt(playPrefsKey, payload);
+
+            base.LateAwake();
+        }
+
         [ContextMenu("Increment then Raise Event")]
         public void Increment()
         {

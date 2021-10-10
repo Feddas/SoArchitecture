@@ -9,7 +9,15 @@ using UnityEngine;
 namespace SoArchitecture
 {
     [CreateAssetMenu(fileName = "GameEventFloat", menuName = "SoArchitecture/GameEventFloat")]
-    public class GameEventFloat : GameEventPayload<float, IGameEventListener<float>, SoArchitecture.FloatVariable>
+    public class GameEventFloat : GameEventPayload<float, IGameEventListener<float>, FloatVariable>
     {
+        public override void LateAwake()
+        {
+            // Ensure base.LateAwake can leverage PlayerPrefs
+            playerPrefGet = () => PlayerPrefs.GetFloat(playPrefsKey, PlayerPrefDefault);
+            playerPrefSet = (payload) => PlayerPrefs.SetFloat(playPrefsKey, payload);
+
+            base.LateAwake();
+        }
     }
 }

@@ -9,8 +9,17 @@ using UnityEngine;
 namespace SoArchitecture
 {
     [CreateAssetMenu(fileName = "GameEventBool", menuName = "SoArchitecture/GameEventBool")]
-    public class GameEventBool : GameEventPayload<bool, IGameEventListener<bool>, SoArchitecture.BoolVariable>
+    public class GameEventBool : GameEventPayload<bool, IGameEventListener<bool>, BoolVariable>
     {
+        public override void LateAwake()
+        {
+            // Ensure base.LateAwake can leverage PlayerPrefs
+            playerPrefGet = () => PlayerPrefs.GetInt(playPrefsKey, PlayerPrefDefault ? 1 : 0) == 0 ? false : true;
+            playerPrefSet = (payload) => PlayerPrefs.SetInt(playPrefsKey, payload ? 1 : 0);
+
+            base.LateAwake();
+        }
+
         [ContextMenu("Toggle value then Raise Event")]
         public void Toggle()
         {
